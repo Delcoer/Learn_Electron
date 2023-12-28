@@ -1,0 +1,20 @@
+As we have mentioned above, Electron's main and renderer process have distinct responsibilities and are not interchangeable. 
+This means it is not possible to access the Node.js APIs directly from the renderer process, nor the 
+HTML Document Object Model (DOM) from the main process
+
+Important: signing your code
+In order to distribute desktop applications to end users, we highly recommend that you code sign your Electron app. 
+Code signing is an important part of shipping desktop applications, and is mandatory for the auto-update step in the final 
+part of the tutorial.
+
+Code signing is a security technology that you use to certify that a desktop app was created by a known source. 
+Windows and macOS have their own OS-specific code signing systems that will make it difficult for users to download or launch unsigned applications.
+
+On macOS, code signing is done at the app packaging level. On Windows, distributable installers are signed instead. 
+If you already have code signing certificates for Windows and macOS, you can set your credentials in your Forge configuration.
+
+INFO
+For more information on code signing, check out the Signing macOS Apps guide in the Forge docs.
+
+
+Tutorial: https://www.electronjs.org/docs/latest/tutorial/tutorial-publishing-updating
